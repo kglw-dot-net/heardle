@@ -36,12 +36,17 @@ RUN yarn run build
 RUN yarn install --production=true
 
 
-# Final stage for app image
-FROM base
+## Final stage for app image
+#FROM base
+#
+## Copy built application
+#COPY --from=build /app /app
+#
+## Start the server by default, this can be overwritten at runtime
+#EXPOSE 3000
+#CMD [ "yarn", "run", "start" ]
 
-# Copy built application
-COPY --from=build /app /app
-
-# Start the server by default, this can be overwritten at runtime
-EXPOSE 3000
-CMD [ "yarn", "run", "start" ]
+FROM nginx:stable-alpine
+COPY --from=build /app /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
