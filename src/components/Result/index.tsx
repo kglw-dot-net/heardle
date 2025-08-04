@@ -30,7 +30,7 @@ export function Result({
       60
   );
 
-  const textForTry = ["Wow!", "Super!", "Congrats!", "Nice!"];
+  const textForTry = ["Woooooo!", "Eeyup!", "All in favor of this truth!", "Good to me!"];
 
   if (didGuess) {
     const copyResult = React.useCallback(() => {
@@ -59,9 +59,9 @@ export function Result({
   } else {
     return (
       <>
-        <Styled.ResultTitle>Unfortunately, thats wrong</Styled.ResultTitle>
+        <Styled.ResultTitle>Maybe it&apos;ll work next time...</Styled.ResultTitle>
         <Styled.SongTitle>
-          Todays song is {todaysSolution.artist} -{" "}
+          Today&apos;s song is {todaysSolution.artist} -{" "}
           {todaysSolution.name}
         </Styled.SongTitle>
         <YouTube id={todaysSolution.youtubeId} />

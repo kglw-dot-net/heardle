@@ -52,6 +52,7 @@ export const Section = styled.div`
   gap: 10px;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
 
   a {
     color: ${({ theme }) => theme.text};

@@ -40,8 +40,8 @@ export const Content = styled.div`
 
 export const Logo = styled.h1`
   color: ${({ theme }) => theme.text};
-  font-family: "Roboto Serif", serif;
-  text-transform: uppercase;
+  //font-family: "Roboto Serif", serif;
+  //text-transform: uppercase;
   width: max-content;
 
   -webkit-touch-callout: none;

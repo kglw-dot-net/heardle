@@ -1,8 +1,8 @@
 import { GuessType } from "../types/guess";
+import { startDate } from "../constants";
 
 export function scoreToEmoji(guesses: GuessType[]): string {
   const msInDay = 86400000;
-  const startDate = new Date('4/15/2022');
   const todaysDate = new Date();
   const index = Math.floor((todaysDate.getTime() - startDate.getTime() )/msInDay) + 1 
   const emojis = {
@@ -12,7 +12,7 @@ export function scoreToEmoji(guesses: GuessType[]): string {
     empty: "⬛️",
   };
   // const todaysDate = new Date();
-  const prefix = `HeardleTemplate - #${index} 🎧`;
+  const prefix = `KGLW Heardle - #${index} 🎧`;
 
   let scoreEmoji = "";
 

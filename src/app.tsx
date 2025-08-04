@@ -1,5 +1,3 @@
-import { event } from "react-ga";
-
 import React from "react";
 import _ from "lodash";
 
@@ -101,10 +99,10 @@ function App() {
 
     setCurrentTry((currentTry) => currentTry + 1);
 
-    event({
-      category: "Game",
-      action: "Skip",
-    });
+    // event({
+    //   category: "Game",
+    //   action: "Skip",
+    // });
   }, [currentTry]);
 
   const guess = React.useCallback(() => {
@@ -133,12 +131,12 @@ function App() {
       setDidGuess(true);
     }
 
-    event({
-      category: "Game",
-      action: "Guess",
-      label: `${selectedSong.artist} - ${selectedSong.name}`,
-      value: isCorrect ? 1 : 0,
-    });
+    // event({
+    //   category: "Game",
+    //   action: "Guess",
+    //   label: `${selectedSong.artist} - ${selectedSong.name}`,
+    //   value: isCorrect ? 1 : 0,
+    // });
   }, [guesses, selectedSong]);
 
   return (
