@@ -41,7 +41,7 @@ export function Result({
       <>
         <Styled.ResultTitle>{textForTry[currentTry - 1]}</Styled.ResultTitle>
         <Styled.SongTitle>
-          Todays song is {todaysSolution.artist} -{" "}
+          Today&apos;s song is {todaysSolution.artist} -{" "}
           {todaysSolution.name}
         </Styled.SongTitle>
         <Styled.Tries>
