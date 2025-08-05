@@ -104,7 +104,7 @@ export const songs = [
   { artist: "King Gizzard and the Lizard Wizard", name: "Field of Vision", youtubeId: "S2wZcdW1LKE" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Antarctica", youtubeId: "mcGehIgTnhU" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Ambergris", youtubeId: "cMSTPowdj7w" },
-  { artist: "King Gizzard and the Lizard Wizard", name: "Gondii", youtubeId: "ATjsNT_X_70" },,
+  { artist: "King Gizzard and the Lizard Wizard", name: "Gondii", youtubeId: "ATjsNT_X_70" },
   { artist: "King Gizzard and the Lizard Wizard", name: "The Mother Hen", youtubeId: "lWkRl0U3HuM" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Converge", youtubeId: "bVrxd7YZ_Ng" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Black Hot Soup", youtubeId: "daz_doXNAB4" },
