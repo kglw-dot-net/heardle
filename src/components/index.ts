@@ -3,6 +3,7 @@ export { Footer } from "./Footer";
 export { Game } from "./Game";
 export { Guess } from "./Guess";
 export { Header } from "./Header";
+export { HistoryPopUp } from "./HistoryPopUp";
 export { InfoPopUp } from "./InfoPopUp";
 export { Player } from "./Player";
 export { Result } from "./Result";

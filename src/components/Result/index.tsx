@@ -8,6 +8,7 @@ import { Button } from "../Button";
 import { YouTube } from "../YouTube";
 
 import * as Styled from "./index.styled";
+import { startDate } from "../../constants";
 
 interface Props {
   didGuess: boolean;
@@ -34,7 +35,15 @@ export function Result({
 
   if (didGuess) {
     const copyResult = React.useCallback(() => {
-      navigator.clipboard.writeText(scoreToEmoji(guesses));
+      const msInDay = 86400000;
+      const todaysDate = new Date();
+      const index = Math.floor((todaysDate.getTime() - startDate.getTime() )/msInDay) + 1
+
+      const prefix = `KGLW Heardle - #${index} 🎧`;
+
+      navigator.clipboard.writeText(
+        prefix + ' ' + scoreToEmoji(guesses)
+      );
     }, [guesses]);
 
     return (

@@ -1,13 +1,16 @@
 import React from "react";
+
 import { IoInformationCircleOutline } from "react-icons/io5";
+import { IoIosClock } from "react-icons/all";
 
 import * as Styled from "./index.styled";
 
 interface Props {
+  openHistoryPopUp: () => void;
   openInfoPopUp: () => void;
 }
 
-export function Header({ openInfoPopUp }: Props) {
+export function Header({ openHistoryPopUp, openInfoPopUp }: Props) {
   return (
     <Styled.Container>
       <Styled.Content>
@@ -19,7 +22,14 @@ export function Header({ openInfoPopUp }: Props) {
         />
 
         <Styled.Logo>King Gizzard Heardle</Styled.Logo>
-        <a href="#"></a>
+
+        <IoIosClock
+          onClick={openHistoryPopUp}
+          size={30}
+          width={30}
+          height={30}
+          style={{ marginLeft: 'auto' }}
+        />
       </Styled.Content>
     </Styled.Container>
   );

@@ -3,10 +3,11 @@ import _ from "lodash";
 
 import { Song } from "./types/song";
 import { GuessType } from "./types/guess";
+import { RunStatsType } from "./types/stats";
 
-import { todaysSolution } from "./helpers";
+import { todaysIndex, todaysSolution } from "./helpers";
 
-import { Header, InfoPopUp, Game, Footer } from "./components";
+import { Header, HistoryPopUp, InfoPopUp, Game, Footer } from "./components";
 
 import * as Styled from "./app.styled";
 
@@ -25,23 +26,30 @@ function App() {
   const [didGuess, setDidGuess] = React.useState<boolean>(false);
 
   const firstRun = localStorage.getItem("firstRun") === null;
-  let stats = JSON.parse(localStorage.getItem("stats") || "{}");
+
+  let stats: RunStatsType[] = JSON.parse(localStorage.getItem("stats2") || "[]");
+
+  function getMostRecentRun() {
+    return stats.sort(x => x.index).reverse()[0];
+  }
 
   React.useEffect(() => {
-    if (Array.isArray(stats)) {
+    if (Array.isArray(stats) && stats.length > 0) {
       const visitedToday = _.isEqual(
         todaysSolution,
-        stats[stats.length - 1].solution
+        getMostRecentRun().solution
       );
 
       if (!visitedToday) {
         stats.push({
           solution: todaysSolution,
           currentTry: 0,
-          didGuess: 0,
+          didGuess: false,
+          guesses: guesses,
+          index: todaysIndex
         });
       } else {
-        const { currentTry, guesses, didGuess } = stats[stats.length - 1];
+        const { currentTry, guesses, didGuess } = getMostRecentRun();
         setCurrentTry(currentTry);
         setGuesses(guesses);
         setDidGuess(didGuess);
@@ -52,21 +60,25 @@ function App() {
       stats = [];
       stats.push({
         solution: todaysSolution,
+        currentTry: 0,
+        didGuess: false,
+        guesses: guesses,
+        index: todaysIndex
       });
     }
   }, []);
 
   React.useEffect(() => {
     if (Array.isArray(stats)) {
-      stats[stats.length - 1].currentTry = currentTry;
-      stats[stats.length - 1].didGuess = didGuess;
-      stats[stats.length - 1].guesses = guesses;
+      getMostRecentRun().currentTry = currentTry;
+      getMostRecentRun().didGuess = didGuess;
+      getMostRecentRun().guesses = guesses;
     }
   }),
     [guesses, currentTry, didGuess];
 
   React.useEffect(() => {
-    localStorage.setItem("stats", JSON.stringify(stats));
+    localStorage.setItem("stats2", JSON.stringify(stats));
   }, [stats]);
 
   const [isInfoPopUpOpen, setIsInfoPopUpOpen] =
@@ -79,11 +91,20 @@ function App() {
   const closeInfoPopUp = React.useCallback(() => {
     if (firstRun) {
       localStorage.setItem("firstRun", "false");
-      setIsInfoPopUpOpen(false);
-    } else {
-      setIsInfoPopUpOpen(false);
     }
+    setIsInfoPopUpOpen(false);
   }, [localStorage.getItem("firstRun")]);
+
+  const [isHistoryPopUpOpen, setIsHistoryPopUpOpen] =
+    React.useState<boolean>();
+
+  const openHistoryPopUp = React.useCallback(() => {
+    setIsHistoryPopUpOpen(true);
+  }, []);
+
+  const closeHistoryPopUp = React.useCallback(() => {
+    setIsHistoryPopUpOpen(false);
+  }, []);
 
   const skip = React.useCallback(() => {
     setGuesses((guesses: GuessType[]) => {
@@ -141,8 +162,9 @@ function App() {
 
   return (
     <main>
-      <Header openInfoPopUp={openInfoPopUp} />
+      <Header openInfoPopUp={openInfoPopUp} openHistoryPopUp={openHistoryPopUp} />
       {isInfoPopUpOpen && <InfoPopUp onClose={closeInfoPopUp} />}
+      {isHistoryPopUpOpen && <HistoryPopUp stats={stats} onClose={closeHistoryPopUp} />}
       <Styled.Container>
         <Game
           guesses={guesses}

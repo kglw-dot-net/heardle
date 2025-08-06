@@ -3,41 +3,52 @@ import { IoMusicalNoteOutline, IoHelpCircleOutline } from "react-icons/io5";
 import { Button } from "..";
 
 import * as Styled from "./index.styled";
+import { RunStatsType } from "../../types/stats";
+import { scoreToEmoji } from "../../helpers";
 
 interface Props {
+  stats: RunStatsType[];
   onClose: () => void;
 }
 
-export function InfoPopUp({ onClose }: Props) {
+function Title(item: RunStatsType){
+  if (item.didGuess) {
+    return <a
+      href={"https://youtu.be/" + item.solution.youtubeId}
+      target={"_blank"}
+      rel={"noopener noreferrer"}
+      style={{ textDecoration: "none", color: "white" }}
+    >
+      {item.solution.name} by {item.solution.artist}
+    </a>
+  }
+
+  return <>???</>;
+}
+
+export function HistoryPopUp({ stats, onClose }: Props) {
   return (
     <Styled.Container>
       <Styled.PopUp>
-        <h1>HOW TO PLAY</h1>
+        <h1>HISTORY</h1>
         <Styled.Spacer />
-        <Styled.Section>
-          {/* <IoMusicalNoteOutline size={50} /> */}
-          <p>
-            Listen to the intro, then find the correct King Gizzard song in the list.
-          </p>
-        </Styled.Section>
-        <Styled.Section>
-          {/* <IoHelpCircleOutline size={50} /> */}
-          <p>Skipped or incorrect attempts unlock more of the intro</p>
-        </Styled.Section>
-        <Styled.Section>
-          <p>Answer in as few tries as possible and share your score!</p>
-        </Styled.Section>
-        <Styled.Section>
-          <p>Contains most songs up to Flight b741.</p>
-        </Styled.Section>
-        <Styled.Section>
-          <p>Report issues to u/TimelandIsWacky. Template by <a href="https://github.com/sarvarghese/youtube-heardle-template" target="_blank" rel="noreferrer">sarvarghese.</a></p>
-        </Styled.Section>
-        <Styled.Section>
-          <p>Songs owned by KGLW. Support the band at pdoomrecords.com.</p>
-        </Styled.Section>
-        <Button variant="green" style={{ marginTop: 20 }} onClick={onClose}>
-          Play
+
+        {stats.sort(x => x.index).reverse().map((item, i) => (
+            <section key={i}>
+              <h3 style={{ textAlign: "center" }}>
+                #{item.index + 1}: {Title(item)}
+              </h3>
+
+              <Styled.Section style={{ justifyContent: "space-around" }}>
+                {scoreToEmoji(item.guesses)}
+              </Styled.Section>
+
+              <Styled.Spacer />
+            </section>
+        ))}
+
+        <Button variant="gray" style={{ marginTop: 20, color: "black" }} onClick={onClose}>
+          Close
         </Button>
       </Styled.PopUp>
     </Styled.Container>
