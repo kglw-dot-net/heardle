@@ -28,13 +28,16 @@ export function Result({
   const nextMidnightUTC = new Date(Date.UTC(
     now.getUTCFullYear(),
     now.getUTCMonth(),
-    now.getUTCDate() + 1, // next day
-    0, 0, 0, 0 // midnight UTC
+    now.getUTCDate() + 1,
+    0, 0, 0, 0
   ));
 
-  const hoursToNextDay = Math.floor(
-    (nextMidnightUTC.getTime() - now.getTime()) / 1000 / 60 / 60
-  );
+  const diffMs = nextMidnightUTC.getTime() - now.getTime();
+  const totalMinutes = Math.floor(diffMs / 1000 / 60);
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+
+  const timeToNextTry = `${hours} hour${hours !== 1 ? 's' : ''} and ${minutes} minute${minutes !== 1 ? 's' : ''}`;
 
   const textForTry = ["Woooooo!", "Eeyup!", "All in favor of this truth!", "Good to me!"];
 
@@ -66,7 +69,7 @@ export function Result({
           Copy results
         </Button>
         <Styled.TimeToNext>
-          Remember to come back in {hoursToNextDay}{" "} hours!
+          Remember to come back in {timeToNextTry}!
         </Styled.TimeToNext>
       </>
     );
@@ -80,7 +83,7 @@ export function Result({
         </Styled.SongTitle>
         <YouTube id={todaysSolution.youtubeId} />
         <Styled.TimeToNext>
-          Try again in {hoursToNextDay}{" "} hours
+          Try again in {timeToNextTry}
         </Styled.TimeToNext>
       </>
     );
