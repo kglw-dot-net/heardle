@@ -23,12 +23,17 @@ export function Result({
   guesses,
   currentTry,
 }: Props) {
+  const now = new Date();
+
+  const nextMidnightUTC = new Date(Date.UTC(
+    now.getUTCFullYear(),
+    now.getUTCMonth(),
+    now.getUTCDate() + 1, // next day
+    0, 0, 0, 0 // midnight UTC
+  ));
+
   const hoursToNextDay = Math.floor(
-    (new Date(new Date().setHours(24, 0, 0, 0)).getTime() -
-      new Date().getTime()) /
-      1000 /
-      60 /
-      60
+    (nextMidnightUTC.getTime() - now.getTime()) / 1000 / 60 / 60
   );
 
   const textForTry = ["Woooooo!", "Eeyup!", "All in favor of this truth!", "Good to me!"];
