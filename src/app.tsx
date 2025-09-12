@@ -30,7 +30,7 @@ function App() {
   let stats: RunStatsType[] = JSON.parse(localStorage.getItem("stats2") || "[]");
 
   function getMostRecentRun() {
-    return stats.sort(x => x.index).reverse()[0];
+    return stats.sort((a, b) => a.index - b.index).reverse()[0];
   }
 
   React.useEffect(() => {

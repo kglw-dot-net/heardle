@@ -33,7 +33,7 @@ export function HistoryPopUp({ stats, onClose }: Props) {
         <h1>HISTORY</h1>
         <Styled.Spacer />
 
-        {stats.sort(x => x.index).reverse().map((item, i) => (
+        {stats.sort((a, b) => a.index - b.index).reverse().map((item, i) => (
             <section key={i}>
               <h3 style={{ textAlign: "center" }}>
                 #{item.index + 1}: {Title(item)}
