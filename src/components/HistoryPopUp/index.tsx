@@ -27,13 +27,33 @@ function Title(item: RunStatsType){
 }
 
 export function HistoryPopUp({ stats, onClose }: Props) {
+  const displayStats = Object.values(stats.reduce<Record<number, RunStatsType>>(
+    (acc, item) => {
+      if (!acc[item.index]) {
+        acc[item.index] = item;
+        return acc;
+      }
+
+      if (acc[item.index].didGuess) return acc;
+
+      const existingItemGuesses = acc[item.index].guesses.filter(g => g.song !== undefined).length;
+      const currentItemGuesses = item.guesses.filter(g => g.song !== undefined).length;
+
+      if (currentItemGuesses > existingItemGuesses)
+        acc[item.index] = item;
+
+      return acc;
+    },
+    {}
+  )).sort((a, b) => b.index - a.index);
+
   return (
     <Styled.Container>
       <Styled.PopUp>
         <h1>HISTORY</h1>
         <Styled.Spacer />
 
-        {stats.sort((a, b) => a.index - b.index).reverse().map((item, i) => (
+        {displayStats.map((item, i) => (
             <section key={i}>
               <h3 style={{ textAlign: "center" }}>
                 #{item.index + 1}: {Title(item)}

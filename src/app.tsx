@@ -30,15 +30,12 @@ function App() {
   let stats: RunStatsType[] = JSON.parse(localStorage.getItem("stats2") || "[]");
 
   function getMostRecentRun() {
-    return stats.sort((a, b) => a.index - b.index).reverse()[0];
+    return stats.filter(x => x.index === todaysIndex)[0];
   }
 
   React.useEffect(() => {
     if (Array.isArray(stats) && stats.length > 0) {
-      const visitedToday = _.isEqual(
-        todaysSolution,
-        getMostRecentRun().solution
-      );
+      const visitedToday = stats.filter(x => x.index === todaysIndex).length > 0;
 
       if (!visitedToday) {
         stats.push({
