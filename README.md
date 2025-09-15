@@ -2,11 +2,9 @@
 
 Forked from https://github.com/sarvarghese/youtube-heardle-template. 
 
-## Building (default React stuff)
-
 In the project directory, you can run:
 
-### `yarn`
+### `yarn install`
 Installs all the required dependencies.
 
 ### `yarn start`
