@@ -39,20 +39,21 @@ export function Result({
 
   const timeToNextTry = `${hours} hour${hours !== 1 ? 's' : ''} and ${minutes} minute${minutes !== 1 ? 's' : ''}`;
 
-  const textForTry = ["Woooooo!", "Eeyup!", "All in favor of this truth!", "Good to me!"];
+  const copyResult = React.useCallback(() => {
+    const msInDay = 86400000;
+    const todaysDate = new Date();
+    const index = Math.floor((todaysDate.getTime() - startDate.getTime() )/msInDay) + 1
+
+    const prefix = `KGLW Heardle - #${index} 🎧 `;
+    const suffix = `\nhttps://heardle.kglw.net/`;
+
+    navigator.clipboard.writeText(
+      prefix + scoreToEmoji(guesses) + suffix
+    );
+  }, [guesses]);
 
   if (didGuess) {
-    const copyResult = React.useCallback(() => {
-      const msInDay = 86400000;
-      const todaysDate = new Date();
-      const index = Math.floor((todaysDate.getTime() - startDate.getTime() )/msInDay) + 1
-
-      const prefix = `KGLW Heardle - #${index} 🎧`;
-
-      navigator.clipboard.writeText(
-        prefix + ' ' + scoreToEmoji(guesses)
-      );
-    }, [guesses]);
+    const textForTry = ["Woooooo!", "Eeyup!", "All in favor of this truth!", "Good to me!"];
 
     return (
       <>
@@ -82,6 +83,9 @@ export function Result({
           {todaysSolution.artist}
         </Styled.SongTitle>
         <YouTube id={todaysSolution.youtubeId} />
+        <Button onClick={copyResult} variant="red">
+          Copy results
+        </Button>
         <Styled.TimeToNext>
           Try again in {timeToNextTry}
         </Styled.TimeToNext>
