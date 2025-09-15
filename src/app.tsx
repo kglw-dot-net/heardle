@@ -104,6 +104,9 @@ function App() {
   }, []);
 
   const skip = React.useCallback(() => {
+    if (!window.confirm('Are you sure you want to skip?'))
+      return;
+
     setGuesses((guesses: GuessType[]) => {
       const newGuesses = [...guesses];
       newGuesses[currentTry] = {
