@@ -58,8 +58,8 @@ export function Result({
       <>
         <Styled.ResultTitle>{textForTry[currentTry - 1]}</Styled.ResultTitle>
         <Styled.SongTitle>
-          Today&apos;s song is {todaysSolution.artist} -{" "}
-          {todaysSolution.name}
+          Today&apos;s song is {todaysSolution.name} -{" "}
+          {todaysSolution.artist}
         </Styled.SongTitle>
         <Styled.Tries>
           You guessed it in {currentTry} {currentTry === 1 ? 'try' : 'tries'}
@@ -78,8 +78,8 @@ export function Result({
       <>
         <Styled.ResultTitle>Maybe it&apos;ll work next time...</Styled.ResultTitle>
         <Styled.SongTitle>
-          Today&apos;s song is {todaysSolution.artist} -{" "}
-          {todaysSolution.name}
+          Today&apos;s song is {todaysSolution.name} -{" "}
+          {todaysSolution.artist}
         </Styled.SongTitle>
         <YouTube id={todaysSolution.youtubeId} />
         <Styled.TimeToNext>

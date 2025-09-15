@@ -35,7 +35,7 @@ export function Search({ currentTry, setSelectedSong }: Props) {
             key={song.youtubeId}
             onClick={() => {
               setSelectedSong(song);
-              setValue(`${song.artist} - ${song.name}`);
+              setValue(`${song.name} - ${song.artist}`);
               setResults([]);
 
               // event({
@@ -46,7 +46,7 @@ export function Search({ currentTry, setSelectedSong }: Props) {
             }}
           >
             <Styled.ResultText>
-              {song.artist} - {song.name}
+              {song.name} - {song.artist}
             </Styled.ResultText>
           </Styled.Result>
         ))}
