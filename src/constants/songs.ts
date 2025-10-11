@@ -30,7 +30,7 @@ export const songs = [
   { artist: "King Gizzard and the Lizard Wizard", name: "Hog Calling Contest", youtubeId: "hrpQl4CLRX4"},
   { artist: "King Gizzard and the Lizard Wizard", name: "Dustbin Fletcher", youtubeId: "fcOPR9lw94k" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Ice V", youtubeId: "ydeV1_8pM4o" },
-  { artist: "King Gizzard and the Lizard Wizard", name: "Music To Change To", youtubeId: "AaHL9EufNcfsDMTL" },
+  { artist: "King Gizzard and the Lizard Wizard", name: "Music To Change To", youtubeId: "WMP8PJtqM2o" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Hell", youtubeId: "6JE0GUsYQNA" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Sleep Drifter", youtubeId: "8XW8yofuGao" },
   { artist: "King Gizzard and the Lizard Wizard", name: "I'm Sleepin' In", youtubeId: "foOU88BZoo0" },
