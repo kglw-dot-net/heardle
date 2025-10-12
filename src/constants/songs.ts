@@ -1,4 +1,6 @@
-export const songs = [
+import { Song } from "../types/song";
+
+export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "Planet B", youtubeId: "ra_pt6B3bag" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Hypertension", youtubeId: "BDJ3nQAanMA" },
   { artist: "King Gizzard and the Lizard Wizard with Mild High Club", name: "Dusk To Dawn On Lygon Street", youtubeId: "sv5rg8lPS3A" },
