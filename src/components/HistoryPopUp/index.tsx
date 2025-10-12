@@ -62,8 +62,6 @@ export function HistoryPopUp({ stats, onClose }: Props) {
               <Styled.Section style={{ justifyContent: "space-around" }}>
                 {scoreToEmoji(item.guesses)}
               </Styled.Section>
-
-              <Styled.Spacer />
             </section>
         ))}
 

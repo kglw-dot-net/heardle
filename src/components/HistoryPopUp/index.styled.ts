@@ -35,6 +35,9 @@ export const PopUp = styled.div`
   h1 {
     margin-bottom: 0;
   }
+  
+  position: absolute;
+  top: 0;
 `;
 
 export const Spacer = styled.div`
