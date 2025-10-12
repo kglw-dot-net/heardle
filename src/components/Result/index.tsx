@@ -52,6 +52,20 @@ export function Result({
     );
   }, [guesses]);
 
+  function slugify(str :string) {
+    return str.toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
+  }
+
+  const songSlug = todaysSolution.slug === null || todaysSolution.slug === undefined
+    ? slugify(todaysSolution.name)
+    : todaysSolution.slug;
+
+  const songUrl = `https://kglw.net/song/${songSlug}/history`;
+
   if (didGuess) {
     const textForTry = ["Woooooo!", "Eeyup!", "All in favor of this truth!", "Good to me!"];
 
@@ -60,15 +74,20 @@ export function Result({
         <Styled.ResultTitle>{textForTry[currentTry - 1]}</Styled.ResultTitle>
         <Styled.SongTitle>
           Today&apos;s song is {todaysSolution.name} -{" "}
-          {todaysSolution.artist}
+          {todaysSolution.artist}!
         </Styled.SongTitle>
         <Styled.Tries>
-          You guessed it in {currentTry} {currentTry === 1 ? 'try' : 'tries'}
+          You guessed it in {currentTry} {currentTry === 1 ? 'try' : 'tries'}.
         </Styled.Tries>
         <YouTube id={todaysSolution.youtubeId} />
         <Button onClick={copyResult} variant="green">
           Copy results
         </Button>
+        <a href={songUrl} target="_blank" rel="noreferrer" style={{marginTop: '1rem'}}>
+          <Button variant="green">
+            Read song history on KGLW.net
+          </Button>
+        </a>
         <Styled.TimeToNext>
           Remember to come back in {timeToNextTry}!
         </Styled.TimeToNext>
@@ -80,12 +99,17 @@ export function Result({
         <Styled.ResultTitle>Maybe it&apos;ll work next time...</Styled.ResultTitle>
         <Styled.SongTitle>
           Today&apos;s song is {todaysSolution.name} -{" "}
-          {todaysSolution.artist}
+          {todaysSolution.artist}!
         </Styled.SongTitle>
         <YouTube id={todaysSolution.youtubeId} />
         <Button onClick={copyResult} variant="red">
           Copy results
         </Button>
+        <a href={songUrl} target="_blank" rel="noreferrer" style={{marginTop: '1rem'}}>
+          <Button variant="green">
+            Read song history on KGLW.net
+          </Button>
+        </a>
         <Styled.TimeToNext>
           Try again in {timeToNextTry}
         </Styled.TimeToNext>
