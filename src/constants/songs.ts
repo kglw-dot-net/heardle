@@ -36,7 +36,7 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "Hell", youtubeId: "6JE0GUsYQNA" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Sleep Drifter", youtubeId: "8XW8yofuGao" },
   { artist: "King Gizzard and the Lizard Wizard", name: "I'm Sleepin' In", youtubeId: "foOU88BZoo0" },
-  { artist: "King Gizzard and the Lizard Wizard", name: "Music To Worship Satan To", youtubeId: "LBp3HnhGBaWvLQ5S" },
+  { artist: "King Gizzard and the Lizard Wizard", name: "Music To Worship Satan To", youtubeId: "1em1dy2yPPA" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Minimum Brain Size", youtubeId: "QTXFeuUCFaU" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Plasma", youtubeId: "QaC2ssj-6Xw" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Yours", youtubeId: "50uxqPUJiDA" },
