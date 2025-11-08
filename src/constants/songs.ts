@@ -60,7 +60,7 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "Greenhouse Heat Death", youtubeId: "5Npv-UvtJ3w" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Doom City", youtubeId: "ixNkWzp1Bjo" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Mycelium", youtubeId: "RfV5gXIZPEo" },
-  { artist: "King Gizzard and the Lizard Wizard", name: "Donkey Jam", youtubeId: "XPnc1uIa_glidAdX" },
+  { artist: "King Gizzard and the Lizard Wizard", name: "Donkey Jam", youtubeId: "y0lFm7EjW80" },
   { artist: "King Gizzard and the Lizard Wizard", name: "If Not Now, Then When?", youtubeId: "K31OW7ZdRGQ" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Boogieman Sam", youtubeId: "-kE1S9olY6A" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Horology", youtubeId: "cRyjHYaZwnw" },
