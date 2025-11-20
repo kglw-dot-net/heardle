@@ -72,7 +72,7 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "Deserted Dunes Welcome Weary Feet", youtubeId: "cw3hIGgFJHs" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Presumptuous", youtubeId: "m-2CDCALDeU" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Im In Your Mind", youtubeId: "mUFicFRuDnU" },
-  { artist: "King Gizzard and the Lizard Wizard", name: "Robocop", youtubeId: "4uiGaf20wExAc8YX" },
+  { artist: "King Gizzard and the Lizard Wizard", name: "Robocop", youtubeId: "aYlRh-mltz0" },
   { artist: "King Gizzard and the Lizard Wizard", name: "The Lord Of Lightning", youtubeId: "bkAgmIBAg9o" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Not Enough Time... Land", youtubeId: "0MyoCoEKDmo" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Timeland", youtubeId: "zZTsaoyunHI" },
