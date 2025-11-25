@@ -300,5 +300,6 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "Polygondwanaland", youtubeId: "p9QhRKIVlJI" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Anoxia", youtubeId: "wpDkWFCkf9g" },
   { artist: "King Gizzard and the Lizard Wizard", name: "All Is Known", youtubeId: "CxlUl6dVxPk" },
-  { artist: "King Gizzard and the Lizard Wizard", name: "Garage Liddiard", youtubeId: "kRhUoO0nqfs" }
+  { artist: "King Gizzard and the Lizard Wizard", name: "Garage Liddiard", youtubeId: "kRhUoO0nqfs" },
+  { artist: "King Gizzard and the Lizard Wizard", name: "Float Along – Fill Your Lungs", youtubeId: "ZzVf5P3FlCk", slug: "float-along-fill-your-lungs-2" }
 ];
