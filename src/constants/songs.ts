@@ -90,7 +90,7 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "The Funeral", youtubeId: "EcNuK43WK4U" },
   { artist: "King Gizzard and the Lizard Wizard", name: "The Great Chain Of Being", youtubeId: "Dzt6XLwpDY4" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Catching Smoke", youtubeId: "4L3-HOdMeuM" },
-  { artist: "King Gizzard and the Lizard Wizard", name: "Trailer Park Kid", youtubeId: "XSUhLmZF8VgiNqrU" },
+  { artist: "King Gizzard and the Lizard Wizard", name: "Trailer Park Kid", youtubeId: "vGHTWpW4ROA" },
   { artist: "King Gizzard and the Lizard Wizard", name: "The God Man's Goat Lust", youtubeId: "HvLCvI3LFwU" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Phantom Island", youtubeId: "1lR8VLt1Xlk" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Demo No. 79", youtubeId: "CTG8splNR3E" },
