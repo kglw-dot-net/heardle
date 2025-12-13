@@ -95,7 +95,7 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "Phantom Island", youtubeId: "1lR8VLt1Xlk" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Demo No. 79", youtubeId: "CTG8splNR3E" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Short Change", youtubeId: "cbv5ItSNKQk" },
-  { artist: "King Gizzard and the Lizard Wizard", name: "Mariposa", youtubeId: "6DkChj07I4k" },
+  { artist: "King Gizzard and the Lizard Wizard", name: "Mariposa", youtubeId: "mVRAXWgyNtU" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Crying", youtubeId: "aCiFO53fWd8" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Theia", youtubeId: "3jnsD-fEHdY" },
   { artist: "King Gizzard and the Lizard Wizard with Mild High Club", name: "Sketches of Brunswick East I", youtubeId: "4QG_zjpJJsg" },
