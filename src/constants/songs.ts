@@ -99,7 +99,7 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "Crying", youtubeId: "aCiFO53fWd8" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Theia", youtubeId: "3jnsD-fEHdY" },
   { artist: "King Gizzard and the Lizard Wizard with Mild High Club", name: "Sketches of Brunswick East I", youtubeId: "4QG_zjpJJsg" },
-  { artist: "King Gizzard and the Lizard Wizard", name: "The Cloud of Dread", youtubeId: "HdaSz0HeUnYgVTLC" },
+  { artist: "King Gizzard and the Lizard Wizard", name: "The Cloud of Dread", youtubeId: "B_dProTs6LE" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Scared Of Christmas", youtubeId: "jj1A7h2-MV4" },
   { artist: "King Gizzard and the Lizard Wizard", name: "O.N.E.", youtubeId: "lkZd2lBQb2c" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Flamethrower", youtubeId: "wPKmEUnj3IE" },
