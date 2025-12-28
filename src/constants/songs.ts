@@ -110,7 +110,7 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "The Mother Hen", youtubeId: "lWkRl0U3HuM" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Converge", youtubeId: "bVrxd7YZ_Ng" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Black Hot Soup", youtubeId: "daz_doXNAB4" },
-  { artist: "King Gizzard and the Lizard Wizard", name: "Year Of Our Lord", youtubeId: "wodGSBSa9ukOW51J" },
+  { artist: "King Gizzard and the Lizard Wizard", name: "Year Of Our Lord", youtubeId: "3zU1bh4q-4U" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Deadstick", youtubeId: "H7t2FL1SRaE" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Extinction", youtubeId: "QefffIbeAcc" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Cellophane", youtubeId: "U68lcZygXlo" },
