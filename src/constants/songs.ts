@@ -226,7 +226,6 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "People-Vultures", youtubeId: "FAyJFLsRWEc" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Change", youtubeId: "3XAhEUHt3zY" },
   { artist: "King Gizzard and the Lizard Wizard", name: "God Is Calling Me Back Home", youtubeId: "SCcm5o84Wv4" },
-  { artist: "Tropical Fuck Storm/King Gizzard and the Lizard Wizard", name: "Satanic Slumber Party Part 1 (The Chairmans Portrait)", youtubeId: "BrPzR6Hu5Zg" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Venusian 2", youtubeId: "dtspnWoRFbw" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Demo No. 67", youtubeId: "QEylT9Qg-MI" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Bone", youtubeId: "RoiqNNajdcc" },
