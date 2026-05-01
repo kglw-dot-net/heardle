@@ -234,7 +234,7 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "Willoughby's Beach", youtubeId: "1oWamdEOcIw" },
   { artist: "King Gizzard and the Lizard Wizard", name: "9 TET", youtubeId: "n_V6WQevAUQ" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Guns & Horses", youtubeId: "U4AbtzIBcSU", slug: 'guns-and-horses' },
-  { artist: "King Gizzard and the Lizard Wizard", name: "Murder Of The Universe", youtubeId: "8Y4CZAMKlXM" },
+  { artist: "King Gizzard and the Lizard Wizard", name: "Murder Of The Universe", youtubeId: "jYBB7bRW4z0" },
   { artist: "King Gizzard and the Lizard Wizard", name: "No Body", youtubeId: "9XiMzrq1AcI" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Cold Cadaver", youtubeId: "M71mQt-4pzo" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Flying Microtonal Banana", youtubeId: "XpRQWt-h_so" },
