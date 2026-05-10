@@ -243,7 +243,6 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard with Mild High Club", name: "D-Day", youtubeId: "ybcKrnivzT8" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Ataraxia", youtubeId: "t23If5O_AdI" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Drum Run", youtubeId: "_Iqb--ZhJJ0" },
-  { artist: "Tropical Fuck Storm/King Gizzard and the Lizard Wizard", name: "Satanic Slumber Party Part 3 (Hoof And Horn)", youtubeId: "L_8AJcXH_Fk" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Nuclear Fusion", youtubeId: "4MFVhqcRpN4" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Astroturf", youtubeId: "ql_z7t6WGPg" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Kepler-22b", youtubeId: "gfvEodNPQGs" },
