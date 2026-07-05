@@ -3,8 +3,9 @@ import { Song } from "../types/song";
 
 export function searchSong(searchTerm: string): Song[] {
   searchTerm = searchTerm.toLowerCase();
+  const uniqueSongs = [...new Map(songs.map(x => [x['name'], x])).values()];
 
-  return songs
+  return uniqueSongs
     .filter((song: Song) => {
       const songName = song.name.toLowerCase();
       //const songArtist = song.artist.toLowerCase();

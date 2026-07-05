@@ -127,12 +127,12 @@ function App() {
   }, [currentTry]);
 
   const guess = React.useCallback(() => {
-    const isCorrect = selectedSong === todaysSolution;
-
     if (!selectedSong) {
       alert("Choose a song");
       return;
     }
+
+    const isCorrect = selectedSong.name === todaysSolution.name;
 
     setGuesses((guesses: GuessType[]) => {
       const newGuesses = [...guesses];
