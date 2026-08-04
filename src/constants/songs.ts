@@ -330,7 +330,7 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "Sea Of Trees", youtubeId: "Xb00govmnjg" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Moses", youtubeId: "infJi0wqcHE" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Flying Fishie", youtubeId: "995lTfyo5UM" },
-  { artist: "King Gizzard and the Lizard Wizard", name: "Stressin'", youtubeId: "9n9dSGNVWFg" },
+  { artist: "King Gizzard and the Lizard Wizard", name: "Stressin'", youtubeId: "vzPWC_iKQjA" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Inner Cell", youtubeId: "oek7d-6KtxU" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Interior People", youtubeId: "LzcWTjY3b8Q" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Ontology", youtubeId: "S55EKp8atjs" },
