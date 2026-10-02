@@ -255,7 +255,7 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "Kelebek", youtubeId: "IM_Up9T-0QM" },
   { artist: "King Gizzard and the Lizard Wizard", name: "The Killing Ground", youtubeId: "I4sJAJQSR0E" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Rattlesnake", youtubeId: "Q-i1XZc8ZwA" },
-  { artist: "King Gizzard and the Lizard Wizard", name: "Gliese 710", youtubeId: "KO_MYeVy-QE" },
+  { artist: "King Gizzard and the Lizard Wizard", name: "Gliese 710", youtubeId: "JB7oa9KkIg8" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Sea of Doubt", youtubeId: "ZcPrx7haw2g" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Stoned Mullet", youtubeId: "jFT15mM8ddM" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Intrasport", youtubeId: "05s4dEcAgMI" },
