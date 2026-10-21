@@ -408,7 +408,7 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "Satan Speeds Up", youtubeId: "R0-DlJ7V6fg" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Black Hot Soup", youtubeId: "daz_doXNAB4" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Dreams", youtubeId: "DN-Sr6nPqNo" },
-  { artist: "King Gizzard and the Lizard Wizard", name: "Perihelion", youtubeId: "OmvaBlRh3sM" },
+  { artist: "King Gizzard and the Lizard Wizard", name: "Perihelion", youtubeId: "G8s3Stq0ato" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Let It Bleed", youtubeId: "maIM5mnXUJA" },
   { artist: "King Gizzard and the Lizard Wizard with Mild High Club", name: "The Spider And Me", youtubeId: "Fg4U8VB7wPI" },
   { artist: "King Gizzard and the Lizard Wizard", name: "The Balrog", youtubeId: "NXe4rkaqKWs" },
