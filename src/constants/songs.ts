@@ -45,7 +45,7 @@ export const songs :Song[] = [
   { artist: "King Gizzard and the Lizard Wizard", name: "It's Got Old", youtubeId: "bXpHsXNY-M8" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Some Of Us", youtubeId: "QBqX7fEwtWk" },
   { artist: "King Gizzard and the Lizard Wizard", name: "The Land Before Timeland", youtubeId: "yTm7wzsoU6I" },
-  { artist: "King Gizzard and the Lizard Wizard", name: "Perihelion", youtubeId: "OmvaBlRh3sM" },
+  { artist: "King Gizzard and the Lizard Wizard", name: "Perihelion", youtubeId: "G8s3Stq0ato" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Acarine", youtubeId: "0xePP-tpwbQ" },
   { artist: "King Gizzard and the Lizard Wizard", name: "The Castle In The Air", youtubeId: "1LYrTvPAGWU" },
   { artist: "King Gizzard and the Lizard Wizard", name: "Life Is Cool", youtubeId: "H1docw-O0uI" },
